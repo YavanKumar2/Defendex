@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Capture Memory</title>
+  </head>
+  <body>
+    <label for="winpmemPath">Winpmem path:</label>
+    <input type="text" id="winpmemPath">
+    
+    <br>
+    
+    <label for="destinationPath">Destination path:</label>
+    <input type="text" id="destinationPath">
+    
+    <br><br>
+    
+    <button id="capture">Capture</button>
+
+    <script>
+      const { dialog } = require('electron').remote;
+      const { exec } = require('child_process');
+
+      const captureButton = document.getElementById('capture');
+
+      captureButton.addEventListener('click', () => {
+        const winpmemPath = document.getElementById('winpmemPath').value;
+        const destinationPath = document.getElementById('destinationPath').value;
+        
+        const command = `"${winpmemPath}" "${destinationPath}"`;
+        
+        exec(command, (error, stdout, stderr) => {
+          // if (error) {
+          //   console.error(`Command execution error: ${error.message}`);
+          //   console.error(`Command stderr: ${stderr}`);
+          //   return;
+          // }
+
+          // Command executed successfully
+          console.log('Command executed successfully');
+          console.log(stdout);
+          
+          // Close the dialog window after capturing
+          const window = require('electron').remote.getCurrentWindow();
+          window.close();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+#logo{
+  height:424px;
+  width: 589px;
+  margin-top:-8%;
+  margin-bottom: -2%;
+}
+
+#defenDex {
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.nav-item{
+  height: 60px;
+  width:170px;
+  
+}
+.nav-link{
+  color:black;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 12%;
+}
+.nav{
+  background-color: rgba(200, 200, 200, 0.2);
+}
+.file-bar{
+  margin-left: 36%;
+  margin-top:3%;
+}
+.nav-underline .nav-link.active {
+  border-bottom: 2px solid #0b4dda !important;
+  color:#0b4dda;
+}
+#file-path{
+  width:35%;
+  height: 37px;
+}
+.choose-file {
+  border: 1px solid #0b4dda;
+  background-color: white;
+  color: #0b4dda;
+}
+.choose-file:hover {
+  background-color: #0b4dda;
+  color: white;
+}
+#features{
+  margin-left: 39%;
+  margin-top: 2%;
+  
+}
+.hovering{
+  border: 1px solid #0b4dda;
+  background-color: white;
+  color: #0b4dda;
+
+}
+.hovering:hover{
+  background-color: #0b4dda;
+  color: white;
+}
+h1{
+  margin-left: 38%;
+  margin-top: 3%;
+}
+#processing{
+  margin-left:44%;
+  font-weight: bold;
+  
+}
+
+#processing progress{
+  margin-top:-2%;
+  padding-top:3%;
+}
+#progress-bar {
+  width: 25%;
+  height: 30px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  position: relative;
+}
+
+#progress-bar .progress {
+  width: 0%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+#progress-bar .percentage {
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#progress-bar.crossed .percentage {
+  color: white;
+}
+#progress-bar .progress_ {
+  width: 0%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+#progress-bar .percentage_ {
+  color: black;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#progress-bar.crossed .percentage_ {
+  color: white;
+}

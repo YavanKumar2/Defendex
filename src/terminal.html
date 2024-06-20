@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Logs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+      }
+      #pslist, #dlllist, #handles, #ldrmodules, #malfind, #modules, #callbacks, #output {
+        display: flex;
+      }
+      .spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tick-container svg {
+        font-size: 48px;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    
+    <div id="pslist">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Checking list of running processes</h3>
+      </div>
+    </div>
+
+    <div id="dlllist">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Scanning the loaded Dynamic Link Libraries in the memory dump </h3>
+      </div>
+    </div>
+
+    <div id="handles">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Scanning Open handles used by processes in the memory dump</h3>
+      </div>
+    </div>
+    <div id="ldrmodules">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Scanning the loaded modules (Executable files) and their details</h3>
+      </div>
+    </div>
+    <div id="malfind">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Searching if any malware is injected into the memory of a process</h3>
+      </div>
+    </div>
+    <div id="modules">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Listing the loaded kernel modules in the memory dump</h3>
+      </div>
+    </div>
+    <div id="callbacks">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;Checking registered callback functions used by processes in the memory dump</h3>
+      </div>
+    </div>
+    <div id="output">
+      <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div id="terminal-output">
+        <h3>&nbsp;ML model predicting the output...</h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="7" fill="red" />
+  <path fill="white" d="M10.354 4.646a.5.5 0 0 0-.708 0L8 6.293 5.354 3.646a.5.5 0 0 0-.708.708L7.293 7l-2.647 2.646a.5.5 0 0 0 .708.708L8 7.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 7l2.647-2.646a.5.5 0 0 0 0-.708z"/>
+  </svg> -->
